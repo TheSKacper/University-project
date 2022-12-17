@@ -1,0 +1,28 @@
+<h1>Welcome on my test man</h1>
+<hr>
+<app-login></app-login>
+<hr>
+<h2>Objects</h2>
+<div *ngFor="let item of object" class="objects">
+  ID: {{item._id}} || Name: {{item.name}} || Description: {{item.desc}} || Tags: {{item.tags}} || Price: {{item.price}} || Category name: {{item.category_ID.name}} || Category ID: {{item.category_ID._id}} || Producer name: {{item.producer_ID.name}} || producer_ID: {{item.producer_ID._id}}<hr>
+
+</div>
+<h2>Category</h2>
+<div *ngFor="let item of category" class="category">
+ ID of category: {{item._id}} || Name: {{item.name}}
+</div>
+<hr>
+<h2>Producer</h2>
+<div *ngFor="let item of producer" class="producer">
+  Name: {{item.name}} || ID: {{item._id}}
+</div>
+<hr>
+
+<h2>Place</h2>
+
+<div *ngFor="let item of place" class="place">
+  Country: {{item.country}} || Shop name: {{item.nameShop}} 
+  <h3>Products in place</h3>
+  Name: {{item.object_ID.name}} || ID: {{item.object_ID._id}}
+  <hr>
+</div>
